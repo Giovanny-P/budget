@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget</title>
+    <link href="/css/estilos.css" rel="stylesheet"/>
+    <title>Budget APP</title>
 </head>
-<body>
+<body onload="loadApp()">
     
+    <div class="header">
+        <div class="budget">
+            <div class="budget_title">
+                Budget Available:
+            </div>
+            <div class="budget_value" id="budget">+ 7.000.000,00</div>
+            <div class="budget_income cleanStyles">
+                <div class="budget_income--text">income</div>
+                <div class="right">
+                    <div class="budget_income--value" id="income">1.100.000,00</div>
+                    <div class="budget_income--percentage">&nbsp;</div>
+                </div>
+            </div>
+            <div class="budget_expenses cleanStyles">
+                <div class="budget_expenses--text">expenses</div>
+                <div class="right cleanStyles">
+                    <div class="budget_expenses--value" id="expenses">- 800.000,00</div>
+                    <div class="budget_expenses--percentage" id="percentage">75%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/Data.js"></script>
+    <script src="/js/Income.js"></script>
+    <script src="/js/Expenses.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>
