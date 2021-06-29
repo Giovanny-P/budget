@@ -1,40 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/estilos.css" rel="stylesheet"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/estilos.css" rel="stylesheet" />
     <title>Budget APP</title>
-</head>
-<body onload="loadApp()">
-    
+  </head>
+  <body onload="loadApp()">
     <div class="header">
-        <div class="budget">
-            <div class="budget_title">
-                Budget Available:
-            </div>
-            <div class="budget_value" id="budget">+ 7.000.000,00</div>
-            <div class="budget_income cleanStyles">
-                <div class="budget_income--text">income</div>
-                <div class="right">
-                    <div class="budget_income--value" id="income">1.100.000,00</div>
-                    <div class="budget_income--percentage">&nbsp;</div>
-                </div>
-            </div>
-            <div class="budget_expenses cleanStyles">
-                <div class="budget_expenses--text">expenses</div>
-                <div class="right cleanStyles">
-                    <div class="budget_expenses--value" id="expenses">- 800.000,00</div>
-                    <div class="budget_expenses--percentage" id="percentage">75%</div>
-                </div>
-            </div>
+      <div class="budget">
+        <div class="budget_title">Budget Available:</div>
+        <div class="budget_value" id="budget">+ 7.000.000,00</div>
+        <div class="budget_income cleanStyles">
+          <div class="budget_income--text">income</div>
+          <div class="right">
+            <div class="budget_income--value" id="income">1.100.000,00</div>
+            <div class="budget_income--percentage">&nbsp;</div>
+          </div>
         </div>
+        <div class="budget_expenses cleanStyles">
+          <div class="budget_expenses--text">expenses</div>
+          <div class="right cleanStyles">
+            <div class="budget_expenses--value" id="expenses">- 800.000,00</div>
+            <div class="budget_expenses--percentage" id="percentage">75%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container cleanStyles">
+      <div class="income">
+        <h2 class="income_title">Income</h2>
+        <div id="income-list">
+          <div class="element cleanStyles">
+            <div class="element_description">Salary</div>
+            <div class="right cleanStyles">
+              <div class="element_value">+$1.050.000,00</div>
+              <div class="element_delete">
+                <button class="element_delete--btn">
+                  <ion-icon name="close-circle-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="element cleanStyles">
+            <div class="element_description">AFP</div>
+            <div class="right cleanStyles">
+              <div class="element_value">+$1.000.000,00</div>
+              <div class="element_delete">
+                <button class="element_delete--btn">
+                  <ion-icon name="close-circle-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="expenses">
+          <h2 class="expenses_title">Expenses</h2>
+          <div id="expenses-list">
+              <div class="element cleanStyles">
+                  <div class="element_description">Rent payment</div>
+                  <div class="right cleanStyles">
+                      <div class="element_value">- 350.000,00</div>
+                      <div class="element_percentage">20%</div>
+                      <div class="element_delete">
+                          <button class="element_delete--btn">
+                            <ion-icon name="close-circle-outline"></ion-icon>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <div class="element cleanStyles">
+                <div class="element_description">Clothes</div>
+                <div class="right cleanStyles">
+                    <div class="element_value">- 150.000,00</div>
+                    <div class="element_percentage">10%</div>
+                    <div class="element_delete">
+                        <button class="element_delete--btn">
+                          <ion-icon name="close-circle-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
     </div>
 
     <script src="/js/Data.js"></script>
     <script src="/js/Income.js"></script>
     <script src="/js/Expenses.js"></script>
     <script src="/js/app.js"></script>
-</body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

@@ -159,9 +159,9 @@ body {
 
 .add_btn:active { transform: translateY(2px); }
 
-.agregar_tipo:focus,
-.agregar_descripcion:focus,
-.agregar_valor:focus {
+.add_type:focus,
+.add_description:focus,
+.add_value:focus {
     outline: none;
     border: 1px solid #28B9B5;
 }
@@ -240,7 +240,7 @@ h2 {
 }
 
 .element_delete--btn {
-    font-size: 22px;
+    font-size: 15px;
     background: none;
     border: none;
     cursor: pointer;

@@ -4,7 +4,7 @@ const income = [
 ];
 
 const expenses = [
-    new Expenses("Rent apartment", 250000.00),
+    new Expenses("Apartment rent payment", 250000.00),
     new Expenses("Amenities payout", 100000.00),
     new Expenses("Credit card payment", 200000.00)
 ];
