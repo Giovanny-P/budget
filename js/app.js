@@ -1,5 +1,9 @@
-const income = [new Income("Salary", 1050000.0)];
-
+const income = [
+  new Income("Salary", 1050000.0),
+  new Income("other", 123123.0),
+  new Income("AFP", 1000000.0),
+];
+console.log(income);
 const expenses = [
   new Expenses("Apartment rent payment", 243846.0),
   new Expenses("Amenities payout", 94012.0),
@@ -73,13 +77,21 @@ const createIncomeHtml = (income) => {
       <div class="element_value">+ ${currencyFormat(income.value)}</div>
       <div class="element_delete">
         <button class="element_delete--btn">
-          <ion-icon name="close-circle-outline"></ion-icon>
+          <ion-icon name="close-circle-outline"
+          onclick="deleteIncome(${income.id})"></ion-icon>
         </button>
       </div>
     </div>
   </div>
     `;
   return incomeHTML;
+};
+
+const deleteIncome = (id) => {
+  let indexDelete = income.findIndex(incom => incom.id === id);
+  income.splice(indexDelete, 1);
+  loadHeader();
+  loadIncome();
 };
 
 const loadExpenses = () => {
@@ -96,14 +108,24 @@ const createExpensesHtml = (expense) => {
       <div class="element_description">${expense.description}</div>
       <div class="right cleanStyles">
         <div class="element_value">- ${currencyFormat(expense.value)}</div>
-        <div class="element_percentage"> ${percentageFormat(expense.value/totalExpenses())}</div>
+        <div class="element_percentage"> ${percentageFormat(
+          expense.value / totalExpenses()
+        )}</div>
         <div class="element_delete">
           <button class="element_delete--btn">
-            <ion-icon name="close-circle-outline"></ion-icon>
+            <ion-icon name="close-circle-outline"
+            onclick="deleteExpenses(${expense.id})"></ion-icon>
           </button>
         </div>
       </div>
     </div>
       `;
   return expenseHTML;
+};
+
+const deleteExpenses = (id) => {
+  let indexDelete = expenses.findIndex(expense => expense.id === id);
+  expenses.splice(indexDelete, 1);
+  loadHeader();
+  loadExpenses();
 };
