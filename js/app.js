@@ -3,7 +3,7 @@ const income = [
   new Income("other", 123123.0),
   new Income("AFP", 1000000.0),
 ];
-console.log(income);
+
 const expenses = [
   new Expenses("Apartment rent payment", 243846.0),
   new Expenses("Amenities payout", 94012.0),
@@ -129,3 +129,25 @@ const deleteExpenses = (id) => {
   loadHeader();
   loadExpenses();
 };
+
+const addData = () => {
+  let form = document.forms["form"];
+  let type = form["type"];
+  let description = form["description"];
+  let value = form["value"];
+  if(description.value !=="" && value.value !=="") {
+    if(type.value === "income"){
+      income.push(new Income(description.value, +value.value));
+      loadHeader();
+      loadIncome();
+      document.getElementById("form").reset();
+    } else if(type.value === "expenses"){
+      expenses.push(new Expenses(description.value, +value.value));
+      loadHeader();
+      loadExpenses();
+      document.getElementById("form").reset();
+    }
+  } else {
+    alert("Please, you need insert information in the description and value tags.");
+  }
+}

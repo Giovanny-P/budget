@@ -28,6 +28,34 @@
         </div>
       </div>
     </div>
+
+    <form id="form" onsubmit="return false;">
+      <div class="add">
+        <div class="add_container">
+          <select class="add_type" id="type">
+            <option value="income" selected>+</option>
+            <option value="expenses">-</option>
+          </select>
+          <input
+            type="text"
+            class="add_description"
+            placeholder="Add Description"
+            id="description"
+          />
+          <input
+            type="number"
+            class="add_value"
+            placeholder="Value"
+            id="value"
+            step="any"
+          />
+          <button class="add_btn" onclick="addData()">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </form>
+
     <div class="container cleanStyles">
       <div class="income">
         <h2 class="income_title">Income</h2>
@@ -46,21 +74,21 @@
         </div>
       </div>
       <div class="expenses">
-          <h2 class="expenses_title">Expenses</h2>
-          <div id="expenses-list">
-              <div class="element cleanStyles">
-                  <div class="element_description">Rent payment</div>
-                  <div class="right cleanStyles">
-                      <div class="element_value">- 350.000,00</div>
-                      <div class="element_percentage">20%</div>
-                      <div class="element_delete">
-                          <button class="element_delete--btn">
-                            <ion-icon name="close-circle-outline"></ion-icon>
-                          </button>
-                      </div>
-                  </div>
+        <h2 class="expenses_title">Expenses</h2>
+        <div id="expenses-list">
+          <div class="element cleanStyles">
+            <div class="element_description">Rent payment</div>
+            <div class="right cleanStyles">
+              <div class="element_value">- 350.000,00</div>
+              <div class="element_percentage">20%</div>
+              <div class="element_delete">
+                <button class="element_delete--btn">
+                  <ion-icon name="close-circle-outline"></ion-icon>
+                </button>
               </div>
+            </div>
           </div>
+        </div>
       </div>
     </div>
 
